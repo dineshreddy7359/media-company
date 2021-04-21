@@ -1,0 +1,62 @@
+<!-- <p>header works!</p> -->
+<nav class="navbar navbar-inverse fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapsingNavbarHeader">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <h2 class="navbar-brand">Media App</h2>
+        </div>
+        <div class="collapse navbar-collapse" id="collapsingNavbarHeader">
+            <ul class="nav navbar-nav">
+                <li><a [routerLink]="['/home']">Home</a></li>
+                <li *ngIf="isLogin"><a [routerLink]="['/gallery']">Gallery</a></li>
+                <li><a [routerLink]="['/about']">About</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li *ngIf="!isLogin"><a data-toggle="modal" data-target="#loginModal"><span class="glyphicon glyphicon-log-in p-r-10"></span>Login </a></li>
+                <li *ngIf="isLogin"><a (click)="logout()"><span class="glyphicon glyphicon-log-out p-r-10"></span>Logout </a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div id="loginModal" class="modal fade" role="dialog" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <form [formGroup]="loginFormgroup">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Login Info</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-body modal-body-4">
+                        <div class="card card-shadow-none">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-12 mb-24">
+                                    <div class="form-group">
+                                        <label>User Id <span class="error">*</span></label>
+                                        <input type="text" class="form-control card" formControlName="userid">
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-12 mb-24">
+                                    <div class="form-group">
+                                        <label>Password <span class="error">*</span></label>
+                                        <input type="text" class="form-control card" formControlName="password">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" [disabled]="loginFormgroup.invalid" data-dismiss="modal" (click)="login()">Sign In</button>
+                    <button class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

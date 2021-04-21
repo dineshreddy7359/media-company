@@ -1,0 +1,32 @@
+
+.bg-light {
+    background-color: #bfc1c2!important;
+}
+
+.navbar {
+    min-width: 100%;
+    position: absolute !important;
+    min-height: 50px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+}
+
+.navbar-brand {
+    float: left;
+    height: 40px;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 0px;
+}
+
+li {
+    margin-top: 10px;
+}
+
+.p-r-10 {
+    padding-right: 10px;
+}
+
+.error {
+    color: red;
+}

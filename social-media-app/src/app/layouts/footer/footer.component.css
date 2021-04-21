@@ -1,0 +1,46 @@
+
+.footer {
+    width: 100%;
+    clear: both;
+    font-size: 16;
+    text-rendering: auto;
+    position: relative;
+}
+
+.tableft {
+    float: left;
+    background-color: #2e2e33;
+    width: 40%;
+    height: 110px;
+    color: white;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 15px 15px;
+}
+
+.tabrigth {
+    float: right;
+    background-color: #2e2e33;
+    width: 35%;
+    height: 110px;
+    color: white;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 15px 15px;
+}
+
+.tabcenter {
+    float: right;
+    background-color: #2e2e33;
+    width: 25%;
+    height: 110px;
+    color: white;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 15px 15px;
+}
+
+p {
+    margin-left: 40px;
+    margin-right: 80px;
+}

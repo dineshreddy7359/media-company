@@ -1,0 +1,18 @@
+.main-container {
+    display: flex;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.main {
+    margin-top: 10%;
+    margin-bottom: 10%; 
+}
+
+p {
+    margin-left: 40px;
+    margin-right: 80px;
+}
